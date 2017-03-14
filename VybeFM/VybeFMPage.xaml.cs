@@ -45,7 +45,7 @@ namespace VybeFM
 
 		async void StopMusicPlayer()
 		{
-			await CrossMediaManager.Current.AudioPlayer.Stop();
+			await CrossMediaManager.Current.Stop();
 			StartStopButton.Image = "play.png";
 			isPlaying = false;
 			streamStatus.Text = "PAUSED";
