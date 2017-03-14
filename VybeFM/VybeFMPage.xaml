@@ -3,9 +3,10 @@
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="3*" />
-			<RowDefinition Height="6*" />
-			<RowDefinition Height="2*" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="3*" />
 		</Grid.RowDefinitions>
+		
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
@@ -17,9 +18,40 @@
 			Aspect="AspectFill"
 			Grid.Row="0"
 			Grid.Column="0"
-			Grid.RowSpan="3" />
+			Grid.RowSpan="4" />
 
 		<!-- Logo Image -->
-		<Image Source="logo.png" VerticalOptions="Center" HorizontalOptions="Center" />
+		<Grid Grid.Row="0">
+			<Image Source="logo.png" VerticalOptions="Center" HorizontalOptions="Center" />
+		</Grid>
+
+
+		<Grid Grid.Row="1" Padding="15" BackgroundColor="#70000000">
+			<StackLayout>
+				<Label
+				HorizontalTextAlignment="Center" 
+				VerticalOptions="Center"
+				HorizontalOptions="Center"
+				FontAttributes="Bold" 
+				FontSize="Large"
+				Text="PAUSED" 
+				TextColor="White" 
+				x:Name="streamStatus" />
+				<Label
+				HorizontalTextAlignment="Center" 
+				VerticalOptions="Center"
+				HorizontalOptions="Center"
+				FontSize="Small"
+				Text="Press play to start the radio stream" 
+				TextColor="White"
+				x:Name="currentSong" />
+			</StackLayout>
+		</Grid>
+
+		<Grid Grid.Row="2" Padding="50">
+			<Button Image="play.png" Clicked="ToggleOnOff" x:Name="StartStopButton" />
+		</Grid>
+	
+
 	</Grid>
 </ContentPage>
