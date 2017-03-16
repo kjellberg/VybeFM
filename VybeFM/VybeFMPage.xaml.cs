@@ -18,7 +18,6 @@ namespace VybeFM
 		public VybeFMPage()
 		{
 			InitializeComponent();
-			currentSong.Text = "Loading..";
 			GetStats();
 			Xamarin.Forms.Device.StartTimer(TimeSpan.FromSeconds(10), RefreshStatsCallback);
 		}
@@ -38,7 +37,7 @@ namespace VybeFM
 		async void StartMusicPlayer()
 		{
 			await CrossMediaManager.Current.Play(this.radioStreamURL);
-			StartStopButton.Image = "stop.png";
+			StartStopButtonImage.Source = "stop.png";
 			isPlaying = true;
 			streamStatus.Text = "NOW PLAYING";
 		}
@@ -46,7 +45,7 @@ namespace VybeFM
 		async void StopMusicPlayer()
 		{
 			await CrossMediaManager.Current.Stop();
-			StartStopButton.Image = "play.png";
+			StartStopButtonImage.Source = "play.png";
 			isPlaying = false;
 			streamStatus.Text = "PAUSED";
 		}
@@ -78,5 +77,6 @@ namespace VybeFM
 			currentSong.Text = response.songtitle;
 			this.IsBusy = false;
 		}
+
 	}
 }
