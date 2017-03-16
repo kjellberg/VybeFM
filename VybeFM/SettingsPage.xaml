@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VybeFM.SettingsPage">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="9*" />
+				<RowDefinition Height="1*" />
+			</Grid.RowDefinitions>
+
+			<Grid Grid.Row="0">
+				<TableView Intent="Settings">
+					<TableSection Title="Stream Settings">
+						<SwitchCell x:Name="EnabledHQ" Text="Enable High Quality Stream" OnChanged="ChangedEnabledHQ"></SwitchCell>
+					</TableSection>
+				</TableView>
+			</Grid>
+			<Grid Grid.Row="1">
+				<Button Text="Close" Clicked="CloseModal" VerticalOptions="Center" HorizontalOptions="Center" />
+			</Grid>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

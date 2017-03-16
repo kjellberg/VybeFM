@@ -7,8 +7,7 @@ namespace VybeFM
 		public App()
 		{
 			InitializeComponent();
-
-			MainPage = new VybeFMPage();
+			MainPage = new NavigationPage(new VybeFMPage());
 		}
 
 		protected override void OnStart()

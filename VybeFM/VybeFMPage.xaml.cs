@@ -18,13 +18,12 @@ namespace VybeFM
 		string radioStreamURL_HQ = "http://cast1.vybe.se:8433/192.mp3";
 		string radioStreamURL_LQ = "http://cast1.vybe.se:8433/64.mp3";
 
-		bool highQualityStream = false;
-
 		bool isPlaying = false;
 		HttpClient client;
 
 		public VybeFMPage()
 		{
+			NavigationPage.SetHasNavigationBar(this, false);
 			InitializeComponent();
 			GetStats();
 			Xamarin.Forms.Device.StartTimer(TimeSpan.FromSeconds(10), RefreshStatsCallback);
@@ -42,15 +41,14 @@ namespace VybeFM
 			}
 		}
 
-		void DisplaySettingsPage(object sender, EventArgs args)
+		async void DisplaySettingsPage(object sender, EventArgs args)
 		{
-			
+			await Navigation.PushModalAsync(new SettingsPage(this), true);
 		}
-
 
 		string GetStreamURL()
 		{
-			if (highQualityStream)
+			if (Settings.EnabledHQ)
 			{
 				return this.radioStreamURL_HQ;
 			}
@@ -60,7 +58,7 @@ namespace VybeFM
 			}
 		}
 
-		void ChangeStreamQuality()
+		public void RestartStream()
 		{
 			StopMusicPlayer();
 			StartMusicPlayer();
