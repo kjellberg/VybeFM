@@ -6,11 +6,15 @@ using Newtonsoft.Json;
 
 using Xamarin.Forms;
 using Plugin.MediaManager;
+using Plugin.MediaManager.Abstractions;
 
 namespace VybeFM
 {
 	public partial class VybeFMPage : ContentPage
 	{
+
+		private IPlaybackController PlaybackController => CrossMediaManager.Current.PlaybackController;
+
 		string radioStreamURL_HQ = "http://cast1.vybe.se:8433/192.mp3";
 		string radioStreamURL_LQ = "http://cast1.vybe.se:8433/64.mp3";
 
@@ -50,6 +54,12 @@ namespace VybeFM
 			}
 		}
 
+		void ChangeStreamQuality()
+		{
+			StopMusicPlayer();
+			StartMusicPlayer();
+		}
+
 		async void StartMusicPlayer()
 		{
 			await CrossMediaManager.Current.Play(GetStreamURL());
@@ -59,9 +69,10 @@ namespace VybeFM
 			streamStatus.Text = "NOW PLAYING";
 		}
 
-		async void StopMusicPlayer()
+		void StopMusicPlayer()
 		{
-			await CrossMediaManager.Current.Stop();
+			PlaybackController.Stop();
+
 			StartStopButtonImage.Source = "play.png";
 			isPlaying = false;
 			streamStatus.Text = "PAUSED";
