@@ -42,6 +42,12 @@ namespace VybeFM
 			}
 		}
 
+		void DisplaySettingsPage(object sender, EventArgs args)
+		{
+			
+		}
+
+
 		string GetStreamURL()
 		{
 			if (highQualityStream)

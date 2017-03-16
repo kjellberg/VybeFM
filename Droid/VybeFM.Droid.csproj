@@ -145,6 +145,7 @@
     <AndroidResource Include="Resources\drawable-nodpi\play.png" />
     <AndroidResource Include="Resources\drawable-nodpi\stop.png" />
     <AndroidResource Include="Resources\drawable-nodpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\settings.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-nodpi\" />

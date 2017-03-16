@@ -5,6 +5,7 @@
 			<RowDefinition Height="3*" />
 			<RowDefinition Height="Auto" />
 			<RowDefinition Height="3*" />
+			<RowDefinition Height="0.5*" />
 		</Grid.RowDefinitions>
 		
 		<Grid.ColumnDefinitions>
@@ -53,6 +54,15 @@
 			    <Image.GestureRecognizers>
 			        <TapGestureRecognizer
 			                Tapped="ToggleOnOff"  />
+			  </Image.GestureRecognizers>
+			</Image>
+		</Grid>
+
+		<Grid Grid.Row="3">
+			<Image x:Name="DisplaySettingsPageButton" Source="play.png" HorizontalOptions="End">
+			    <Image.GestureRecognizers>
+			        <TapGestureRecognizer
+			                Tapped="DisplaySettingsPage"  />
 			  </Image.GestureRecognizers>
 			</Image>
 		</Grid>
