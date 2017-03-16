@@ -58,8 +58,8 @@
 			</Image>
 		</Grid>
 
-		<Grid Grid.Row="3">
-			<Image x:Name="DisplaySettingsPageButton" Source="play.png" HorizontalOptions="End">
+		<Grid Grid.Row="3" Padding="10">
+			<Image Source="settings.png" HorizontalOptions="End">
 			    <Image.GestureRecognizers>
 			        <TapGestureRecognizer
 			                Tapped="DisplaySettingsPage"  />
