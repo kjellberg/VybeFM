@@ -11,7 +11,11 @@ namespace VybeFM
 {
 	public partial class VybeFMPage : ContentPage
 	{
-		string radioStreamURL = "http://cast1.vybe.se:8433/192.mp3";
+		string radioStreamURL_HQ = "http://cast1.vybe.se:8433/192.mp3";
+		string radioStreamURL_LQ = "http://cast1.vybe.se:8433/64.mp3";
+
+		bool highQualityStream = false;
+
 		bool isPlaying = false;
 		HttpClient client;
 
@@ -34,9 +38,22 @@ namespace VybeFM
 			}
 		}
 
+		string GetStreamURL()
+		{
+			if (highQualityStream)
+			{
+				return this.radioStreamURL_HQ;
+			}
+			else
+			{
+				return this.radioStreamURL_LQ;
+			}
+		}
+
 		async void StartMusicPlayer()
 		{
-			await CrossMediaManager.Current.Play(this.radioStreamURL);
+			await CrossMediaManager.Current.Play(GetStreamURL());
+
 			StartStopButtonImage.Source = "stop.png";
 			isPlaying = true;
 			streamStatus.Text = "NOW PLAYING";
