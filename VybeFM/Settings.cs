@@ -16,7 +16,7 @@ namespace VybeFM
 
 		public static bool EnabledHQ
 		{
-			get { return AppSettings.GetValueOrDefault<bool>("high_quality_stream", true); }
+			get { return AppSettings.GetValueOrDefault<bool>("high_quality_stream", false); }
 			set { AppSettings.AddOrUpdateValue<bool>("high_quality_stream", value); }
 		}
 	}
