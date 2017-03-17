@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VybeFM.InfoPage">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="9*" />
+				<RowDefinition Height="1*" />
+			</Grid.RowDefinitions>
+
+			<Grid Grid.Row="0">
+				<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+					<Label FontSize="Large" FontAttributes="Bold" Text="VybeFM" HorizontalTextAlignment="Center" />
+					<Label FontSize="Small" HorizontalTextAlignment="Center" Text="Copyright © Vybe Media Group 2017" />
+					<Label FontSize="Small" HorizontalTextAlignment="Center" Text="All rights reserved" />
+					<Label FontSize="Small" HorizontalTextAlignment="Center" Text="www.vybefm.se" />
+					<Label FontSize="Large" Text=" " />
+					<Label FontSize="Small" FontAttributes="Bold" Text="App Information" HorizontalTextAlignment="Center" />
+					<Label FontSize="Small" x:Name="VersionLabel" HorizontalTextAlignment="Center" />
+					<Label FontSize="Small" Text="Developed by Young Media Group Ltd" HorizontalTextAlignment="Center" />
+					<Label FontSize="Small" Text="www.youngmedia.org" HorizontalTextAlignment="Center" />
+				</StackLayout>
+			</Grid>
+			<Grid Grid.Row="1">
+				<Button Text="Close" Clicked="CloseModal" VerticalOptions="Center" HorizontalOptions="Center" />
+			</Grid>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

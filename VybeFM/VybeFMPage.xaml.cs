@@ -41,11 +41,6 @@ namespace VybeFM
 			}
 		}
 
-		async void DisplaySettingsPage(object sender, EventArgs args)
-		{
-			await Navigation.PushModalAsync(new SettingsPage(this), true);
-		}
-
 		string GetStreamURL()
 		{
 			if (Settings.EnabledHQ)
@@ -108,6 +103,16 @@ namespace VybeFM
 		{
 			currentSong.Text = response.songtitle;
 			this.IsBusy = false;
+		}
+
+		async void DisplaySettingsPage(object sender, EventArgs args)
+		{
+			await Navigation.PushModalAsync(new SettingsPage(this), true);
+		}
+
+		async void DisplayInfoPage(object sender, EventArgs args)
+		{
+			await Navigation.PushModalAsync(new InfoPage(), true);
 		}
 
 	}

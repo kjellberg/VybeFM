@@ -116,6 +116,12 @@
     <Reference Include="Plugin.Settings">
       <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
     </Reference>
+    <Reference Include="Version.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Version.1.0.0.0\lib\Xamarin.iOS10\Version.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Version.Plugin">
+      <HintPath>..\packages\Xam.Plugin.Version.1.0.0.0\lib\Xamarin.iOS10\Version.Plugin.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VybeFM\VybeFM.csproj">
@@ -167,6 +173,7 @@
     <BundleResource Include="Resources\stop.png" />
     <BundleResource Include="Resources\equalizer.gif" />
     <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\info.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

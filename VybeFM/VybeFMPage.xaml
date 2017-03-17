@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:VybeFM" x:Class="VybeFM.VybeFMPage">
 	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="3*" />
+			<RowDefinition Height="2*" />
 			<RowDefinition Height="Auto" />
-			<RowDefinition Height="3*" />
-			<RowDefinition Height="1*" />
+			<RowDefinition Height="2*" />
+			<RowDefinition Height="0.5*"/>
 		</Grid.RowDefinitions>
 		
 		<Grid.ColumnDefinitions>
@@ -57,7 +57,13 @@
 			</Image>
 		</Grid>
 
-		<Grid Grid.Row="3" Padding="10">
+		<Grid Grid.Row="3" Padding="10" BackgroundColor="Black">
+			<Image Source="info.png" HorizontalOptions="Start">
+			    <Image.GestureRecognizers>
+			        <TapGestureRecognizer
+			                Tapped="DisplayInfoPage"  />
+			  </Image.GestureRecognizers>
+			</Image>
 			<Image Source="settings.png" HorizontalOptions="End">
 			    <Image.GestureRecognizers>
 			        <TapGestureRecognizer

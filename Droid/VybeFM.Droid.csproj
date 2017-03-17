@@ -119,6 +119,12 @@
     <Reference Include="Plugin.Settings">
       <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\MonoAndroid10\Plugin.Settings.dll</HintPath>
     </Reference>
+    <Reference Include="Version.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Version.1.0.0.0\lib\MonoAndroid10\Version.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Version.Plugin">
+      <HintPath>..\packages\Xam.Plugin.Version.1.0.0.0\lib\MonoAndroid10\Version.Plugin.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VybeFM\VybeFM.csproj">
@@ -153,6 +159,13 @@
     <AndroidResource Include="Resources\drawable-nodpi\stop.png" />
     <AndroidResource Include="Resources\drawable-nodpi\icon.png" />
     <AndroidResource Include="Resources\drawable-nodpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\info.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\settings.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\info.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\info.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\info.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-nodpi\" />
